@@ -1,0 +1,251 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:terms="http://purl.org/dc/terms/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:prov="http://www.w3.org/ns/prov#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns="http://w3id.org/abdn/policy/pope#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#Parameter">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Role"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#PostID">
+    <rdf:type rdf:resource="http://w3id.org/abdn/policy/pope#Parameter"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#FacebookDataSet">
+    <rdf:type rdf:resource="http://w3id.org/abdn/policy/pope#DataSet"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#matches">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#doesNotMatch">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#lessThan">
+    <owl:inverseOf rdf:resource="http://w3id.org/abdn/policy/pope#moreThan"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#Regex">
+    <rdf:type rdf:resource="http://w3id.org/abdn/policy/pope#Parameter"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#XOR_Node">
+    <rdfs:label xml:lang="en">XOR Node</rdfs:label>
+    <rdfs:comment xml:lang="en">A concept describing an inner node of a binary tree structure. The node represents the logical operator XOR in a binary tree description of pope:Constraint. If A is an XOR_Node and B and C are children of A then a test on conditions specified by B XOR C equaled true.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#rhs">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#DataCollection">
+    <rdfs:label xml:lang="en">Data Collection</rdfs:label>
+    <rdfs:comment xml:lang="en">A kind of data processing activity plan describing the process of data gathering (e.g. manual collection, collection using an API etc.)</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://w3id.org/abdn/policy/pope#ActivityPlan"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#Location">
+    <rdf:type rdf:resource="http://w3id.org/abdn/policy/pope#Parameter"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#moreThan">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#OR_Node">
+    <rdfs:label xml:lang="en">OR Node</rdfs:label>
+    <rdfs:comment xml:lang="en">A concept describing an inner node of a binary tree structure. The node represents the logical operator OR  in a binary tree description of pope:Constraint. If A is an OR_Node and B and C are children of A then a test on conditions specified by B OR C equaled true.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#CollectionViaApi">
+    <rdf:type rdf:resource="http://w3id.org/abdn/policy/pope#DataCollection"/>
+    <rdf:type rdf:resource="http://w3id.org/abdn/policy/pope#ActivityPlan"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#lessThanOrEqualTo">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#DataAnalysis">
+    <rdfs:label xml:lang="en">Data Analysis</rdfs:label>
+    <rdfs:comment xml:lang="en">A kind of data processing activity plan describing the process of data analysis (e.g. sentiment analysis, word frequency count, etc.)</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://w3id.org/abdn/policy/pope#ActivityPlan"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#StatisticalMeasure">
+    <rdf:type rdf:resource="http://w3id.org/abdn/policy/pope#Parameter"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#ManualCollection">
+    <rdf:type rdf:resource="http://w3id.org/abdn/policy/pope#DataSet"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#ManualDataCollection">
+    <rdf:type rdf:resource="http://w3id.org/abdn/policy/pope#DataCollection"/>
+    <rdf:type rdf:resource="http://w3id.org/abdn/policy/pope#ActivityPlan"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#TwitterDataset">
+    <rdf:type rdf:resource="http://w3id.org/abdn/policy/pope#DataSet"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#moreThanOrEqualTo">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#AND_Node">
+    <rdfs:label xml:lang="en">And Node</rdfs:label>
+    <rdfs:comment xml:lang="en">A concept describing an inner node of a binary tree structure. The node represents the logical operator AND in a binary tree description of pope:Constraint. If A is an XOR_Node and B and C are children of A then a test on conditions specified by B AND C equaled true.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#PopeSkosSchema">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#Constraint">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Role"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#appliesTo">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#LeafNode">
+    <rdfs:label xml:lang="en">Leaf Node</rdfs:label>
+    <rdfs:comment xml:lang="en">A concept describing a leaf node of a binary tree structure. The node is used to bind a 
+a binary tree description of pope:Constraint to a specific pope:Parameter wich captures an aspect of the state of the world via subproperties of skos:related defined in PoPE. For eample, a parameter representing a keyword being included in a piece of text.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#DataRemoval">
+    <rdf:type rdf:resource="http://w3id.org/abdn/policy/pope#DataPreprocessing"/>
+    <rdf:type rdf:resource="http://w3id.org/abdn/policy/pope#ActivityPlan"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#TxtToUpperCase">
+    <rdf:type rdf:resource="http://w3id.org/abdn/policy/pope#DataPreprocessing"/>
+    <rdf:type rdf:resource="http://w3id.org/abdn/policy/pope#ActivityPlan"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#subsumes">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#WordFrequencyCount">
+    <rdf:type rdf:resource="http://w3id.org/abdn/policy/pope#ActivityPlan"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#DataSet">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Role"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#ApiEndpoint">
+    <rdf:type rdf:resource="http://w3id.org/abdn/policy/pope#Parameter"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#Keyword">
+    <rdf:type rdf:resource="http://w3id.org/abdn/policy/pope#Parameter"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#notIncludedIn">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#DataFiltering">
+    <rdf:type rdf:resource="http://w3id.org/abdn/policy/pope#DataPreprocessing"/>
+    <rdf:type rdf:resource="http://w3id.org/abdn/policy/pope#ActivityPlan"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#GroupTag">
+    <rdf:type rdf:resource="http://w3id.org/abdn/policy/pope#Parameter"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#ActivityPlan">
+    <rdfs:label xml:lang="en">Activity Plan</rdfs:label>
+    <rdfs:comment xml:lang="en">A concept describing a high level plan of a data processing activity.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Plan"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#lhs">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#DataPreprocessing">
+    <rdfs:label xml:lang="en">Data Preprocessing</rdfs:label>
+    <rdfs:comment xml:lang="en">A kind of data processing activity plan describing the process of data preprocessing (e.g. stop words removal, filtering, text case transformation, etc.)</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://w3id.org/abdn/policy/pope#ActivityPlan"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#TopicExtraction">
+    <rdf:type rdf:resource="http://w3id.org/abdn/policy/pope#DataAnalysis"/>
+    <rdf:type rdf:resource="http://w3id.org/abdn/policy/pope#ActivityPlan"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#Precondition">
+    <rdf:type rdf:resource="http://w3id.org/abdn/policy/pope#Constraint"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#Time">
+    <rdf:type rdf:resource="http://w3id.org/abdn/policy/pope#Parameter"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#Postcondition">
+    <rdf:type rdf:resource="http://w3id.org/abdn/policy/pope#Constraint"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#NewsArticlesDataSet">
+    <rdf:type rdf:resource="http://w3id.org/abdn/policy/pope#DataSet"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#includedIn">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#isEqualTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#SentimentDetection">
+    <rdf:type rdf:resource="http://w3id.org/abdn/policy/pope#DataAnalysis"/>
+    <rdf:type rdf:resource="http://w3id.org/abdn/policy/pope#ActivityPlan"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#TxtToLowerCase">
+    <rdf:type rdf:resource="http://w3id.org/abdn/policy/pope#DataPreprocessing"/>
+    <rdf:type rdf:resource="http://w3id.org/abdn/policy/pope#ActivityPlan"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#TextObject">
+    <rdf:type rdf:resource="http://w3id.org/abdn/policy/pope#Parameter"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope">
+    <owl:imports rdf:resource="http://www.w3.org/ns/prov-o-20130430"/>
+    <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Milan Markovic</terms:creator>
+    <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Corsar</terms:creator>
+    <terms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://creativecommons.org/licenses/by/4.0/</terms:license>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PoPE Version 1.0</rdfs:label>
+    <terms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The PoPE Provenance Vocabulary defines a set of concepts and terms (the vocabulary)  for describing the use of social media data as evidence in policy-making.</terms:description>
+    <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chenghua Lin</terms:creator>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.0</owl:versionInfo>
+    <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Peter Edwards</terms:creator>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#parameter">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://w3id.org/abdn/policy/pope#describedAs">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#narrower"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+</rdf:RDF>

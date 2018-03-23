@@ -1,0 +1,136 @@
+<http://w3id.org/abdn/policy/pope#LeafNode> <http://www.w3.org/2000/01/rdf-schema#label> "Leaf Node"@en .
+<http://w3id.org/abdn/policy/pope#LeafNode> <http://www.w3.org/2000/01/rdf-schema#comment> "A concept describing a leaf node of a binary tree structure. The node is used to bind a \na binary tree description of pope:Constraint to a specific pope:Parameter wich captures an aspect of the state of the world via subproperties of skos:related defined in PoPE. For eample, a parameter representing a keyword being included in a piece of text."@en .
+<http://w3id.org/abdn/policy/pope#LeafNode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/abdn/policy/pope#LeafNode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/abdn/policy/pope#SentimentDetection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/abdn/policy/pope#DataAnalysis> .
+<http://w3id.org/abdn/policy/pope#SentimentDetection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/abdn/policy/pope#ActivityPlan> .
+<http://w3id.org/abdn/policy/pope#SentimentDetection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/abdn/policy/pope#doesNotMatch> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#related> .
+<http://w3id.org/abdn/policy/pope#doesNotMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/abdn/policy/pope#rhs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/abdn/policy/pope#TextObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/abdn/policy/pope#Parameter> .
+<http://w3id.org/abdn/policy/pope#TextObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/abdn/policy/pope#DataSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Role> .
+<http://w3id.org/abdn/policy/pope#DataSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/abdn/policy/pope#appliesTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#related> .
+<http://w3id.org/abdn/policy/pope#appliesTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/abdn/policy/pope#DataCollection> <http://www.w3.org/2000/01/rdf-schema#label> "Data Collection"@en .
+<http://w3id.org/abdn/policy/pope#DataCollection> <http://www.w3.org/2000/01/rdf-schema#comment> "A kind of data processing activity plan describing the process of data gathering (e.g. manual collection, collection using an API etc.)"@en .
+<http://w3id.org/abdn/policy/pope#DataCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/abdn/policy/pope#ActivityPlan> .
+<http://w3id.org/abdn/policy/pope#DataCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/abdn/policy/pope#Parameter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Role> .
+<http://w3id.org/abdn/policy/pope#Parameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/abdn/policy/pope#Time> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/abdn/policy/pope#Parameter> .
+<http://w3id.org/abdn/policy/pope#Time> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/abdn/policy/pope#Regex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/abdn/policy/pope#Parameter> .
+<http://w3id.org/abdn/policy/pope#Regex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/abdn/policy/pope#Precondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/abdn/policy/pope#Constraint> .
+<http://w3id.org/abdn/policy/pope#Precondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/abdn/policy/pope#TxtToUpperCase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/abdn/policy/pope#DataPreprocessing> .
+<http://w3id.org/abdn/policy/pope#TxtToUpperCase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/abdn/policy/pope#ActivityPlan> .
+<http://w3id.org/abdn/policy/pope#TxtToUpperCase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/abdn/policy/pope#DataFiltering> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/abdn/policy/pope#DataPreprocessing> .
+<http://w3id.org/abdn/policy/pope#DataFiltering> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/abdn/policy/pope#ActivityPlan> .
+<http://w3id.org/abdn/policy/pope#DataFiltering> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/abdn/policy/pope#matches> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#related> .
+<http://w3id.org/abdn/policy/pope#matches> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/abdn/policy/pope#FacebookDataSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/abdn/policy/pope#DataSet> .
+<http://w3id.org/abdn/policy/pope#FacebookDataSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/abdn/policy/pope#WordFrequencyCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/abdn/policy/pope#ActivityPlan> .
+<http://w3id.org/abdn/policy/pope#WordFrequencyCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/abdn/policy/pope#lhs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/abdn/policy/pope#DataRemoval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/abdn/policy/pope#DataPreprocessing> .
+<http://w3id.org/abdn/policy/pope#DataRemoval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/abdn/policy/pope#ActivityPlan> .
+<http://w3id.org/abdn/policy/pope#DataRemoval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/abdn/policy/pope> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/prov-o-20130430> .
+<http://w3id.org/abdn/policy/pope> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core> .
+<http://w3id.org/abdn/policy/pope> <http://purl.org/dc/terms/creator> "Milan Markovic"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/abdn/policy/pope> <http://purl.org/dc/terms/creator> "David Corsar"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/abdn/policy/pope> <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0/"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/abdn/policy/pope> <http://www.w3.org/2000/01/rdf-schema#label> "PoPE Version 1.0"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/abdn/policy/pope> <http://purl.org/dc/terms/description> "The PoPE Provenance Vocabulary defines a set of concepts and terms (the vocabulary)  for describing the use of social media data as evidence in policy-making."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/abdn/policy/pope> <http://purl.org/dc/terms/creator> "Chenghua Lin"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/abdn/policy/pope> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/abdn/policy/pope> <http://purl.org/dc/terms/creator> "Peter Edwards"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://w3id.org/abdn/policy/pope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://w3id.org/abdn/policy/pope#PopeSkosSchema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://w3id.org/abdn/policy/pope#PopeSkosSchema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/abdn/policy/pope#includedIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#related> .
+<http://w3id.org/abdn/policy/pope#includedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/abdn/policy/pope#isEqualTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<http://w3id.org/abdn/policy/pope#isEqualTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#related> .
+<http://w3id.org/abdn/policy/pope#isEqualTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/abdn/policy/pope#GroupTag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/abdn/policy/pope#Parameter> .
+<http://w3id.org/abdn/policy/pope#GroupTag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/abdn/policy/pope#PostID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/abdn/policy/pope#Parameter> .
+<http://w3id.org/abdn/policy/pope#PostID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/abdn/policy/pope#ManualDataCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/abdn/policy/pope#DataCollection> .
+<http://w3id.org/abdn/policy/pope#ManualDataCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/abdn/policy/pope#ActivityPlan> .
+<http://w3id.org/abdn/policy/pope#ManualDataCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/abdn/policy/pope#moreThan> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#related> .
+<http://w3id.org/abdn/policy/pope#moreThan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/abdn/policy/pope#parameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/abdn/policy/pope#StatisticalMeasure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/abdn/policy/pope#Parameter> .
+<http://w3id.org/abdn/policy/pope#StatisticalMeasure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/abdn/policy/pope#ApiEndpoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/abdn/policy/pope#Parameter> .
+<http://w3id.org/abdn/policy/pope#ApiEndpoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/abdn/policy/pope#ManualCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/abdn/policy/pope#DataSet> .
+<http://w3id.org/abdn/policy/pope#ManualCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/abdn/policy/pope#moreThanOrEqualTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#related> .
+<http://w3id.org/abdn/policy/pope#moreThanOrEqualTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/abdn/policy/pope#lessThanOrEqualTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#related> .
+<http://w3id.org/abdn/policy/pope#lessThanOrEqualTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/abdn/policy/pope#DataPreprocessing> <http://www.w3.org/2000/01/rdf-schema#label> "Data Preprocessing"@en .
+<http://w3id.org/abdn/policy/pope#DataPreprocessing> <http://www.w3.org/2000/01/rdf-schema#comment> "A kind of data processing activity plan describing the process of data preprocessing (e.g. stop words removal, filtering, text case transformation, etc.)"@en .
+<http://w3id.org/abdn/policy/pope#DataPreprocessing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/abdn/policy/pope#ActivityPlan> .
+<http://w3id.org/abdn/policy/pope#DataPreprocessing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/abdn/policy/pope#Constraint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Role> .
+<http://w3id.org/abdn/policy/pope#Constraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/abdn/policy/pope#DataAnalysis> <http://www.w3.org/2000/01/rdf-schema#label> "Data Analysis"@en .
+<http://w3id.org/abdn/policy/pope#DataAnalysis> <http://www.w3.org/2000/01/rdf-schema#comment> "A kind of data processing activity plan describing the process of data analysis (e.g. sentiment analysis, word frequency count, etc.)"@en .
+<http://w3id.org/abdn/policy/pope#DataAnalysis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/abdn/policy/pope#ActivityPlan> .
+<http://w3id.org/abdn/policy/pope#DataAnalysis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/abdn/policy/pope#NewsArticlesDataSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/abdn/policy/pope#DataSet> .
+<http://w3id.org/abdn/policy/pope#NewsArticlesDataSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/abdn/policy/pope#Keyword> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/abdn/policy/pope#Parameter> .
+<http://w3id.org/abdn/policy/pope#Keyword> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/abdn/policy/pope#ActivityPlan> <http://www.w3.org/2000/01/rdf-schema#label> "Activity Plan"@en .
+<http://w3id.org/abdn/policy/pope#ActivityPlan> <http://www.w3.org/2000/01/rdf-schema#comment> "A concept describing a high level plan of a data processing activity."@en .
+<http://w3id.org/abdn/policy/pope#ActivityPlan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Plan> .
+<http://w3id.org/abdn/policy/pope#ActivityPlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/abdn/policy/pope#Postcondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/abdn/policy/pope#Constraint> .
+<http://w3id.org/abdn/policy/pope#Postcondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/abdn/policy/pope#CollectionViaApi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/abdn/policy/pope#DataCollection> .
+<http://w3id.org/abdn/policy/pope#CollectionViaApi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/abdn/policy/pope#ActivityPlan> .
+<http://w3id.org/abdn/policy/pope#CollectionViaApi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/abdn/policy/pope#notIncludedIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#related> .
+<http://w3id.org/abdn/policy/pope#notIncludedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/abdn/policy/pope#TxtToLowerCase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/abdn/policy/pope#DataPreprocessing> .
+<http://w3id.org/abdn/policy/pope#TxtToLowerCase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/abdn/policy/pope#ActivityPlan> .
+<http://w3id.org/abdn/policy/pope#TxtToLowerCase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/abdn/policy/pope#TopicExtraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/abdn/policy/pope#DataAnalysis> .
+<http://w3id.org/abdn/policy/pope#TopicExtraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/abdn/policy/pope#ActivityPlan> .
+<http://w3id.org/abdn/policy/pope#TopicExtraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/abdn/policy/pope#TwitterDataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/abdn/policy/pope#DataSet> .
+<http://w3id.org/abdn/policy/pope#TwitterDataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/abdn/policy/pope#lessThan> <http://www.w3.org/2002/07/owl#inverseOf> <http://w3id.org/abdn/policy/pope#moreThan> .
+<http://w3id.org/abdn/policy/pope#lessThan> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#related> .
+<http://w3id.org/abdn/policy/pope#lessThan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/abdn/policy/pope#OR_Node> <http://www.w3.org/2000/01/rdf-schema#label> "OR Node"@en .
+<http://w3id.org/abdn/policy/pope#OR_Node> <http://www.w3.org/2000/01/rdf-schema#comment> "A concept describing an inner node of a binary tree structure. The node represents the logical operator OR  in a binary tree description of pope:Constraint. If A is an OR_Node and B and C are children of A then a test on conditions specified by B OR C equaled true."@en .
+<http://w3id.org/abdn/policy/pope#OR_Node> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/abdn/policy/pope#OR_Node> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/abdn/policy/pope#XOR_Node> <http://www.w3.org/2000/01/rdf-schema#label> "XOR Node"@en .
+<http://w3id.org/abdn/policy/pope#XOR_Node> <http://www.w3.org/2000/01/rdf-schema#comment> "A concept describing an inner node of a binary tree structure. The node represents the logical operator XOR in a binary tree description of pope:Constraint. If A is an XOR_Node and B and C are children of A then a test on conditions specified by B XOR C equaled true."@en .
+<http://w3id.org/abdn/policy/pope#XOR_Node> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/abdn/policy/pope#XOR_Node> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/abdn/policy/pope#AND_Node> <http://www.w3.org/2000/01/rdf-schema#label> "And Node"@en .
+<http://w3id.org/abdn/policy/pope#AND_Node> <http://www.w3.org/2000/01/rdf-schema#comment> "A concept describing an inner node of a binary tree structure. The node represents the logical operator AND in a binary tree description of pope:Constraint. If A is an XOR_Node and B and C are children of A then a test on conditions specified by B AND C equaled true."@en .
+<http://w3id.org/abdn/policy/pope#AND_Node> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://w3id.org/abdn/policy/pope#AND_Node> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://w3id.org/abdn/policy/pope#subsumes> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#related> .
+<http://w3id.org/abdn/policy/pope#subsumes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://w3id.org/abdn/policy/pope#Location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3id.org/abdn/policy/pope#Parameter> .
+<http://w3id.org/abdn/policy/pope#Location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://w3id.org/abdn/policy/pope#describedAs> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#narrower> .
+<http://w3id.org/abdn/policy/pope#describedAs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .

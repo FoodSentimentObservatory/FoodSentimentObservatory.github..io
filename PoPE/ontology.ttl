@@ -1,0 +1,209 @@
+@prefix :        <http://w3id.org/abdn/policy/pope#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix terms:   <http://purl.org/dc/terms/> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+
+:Parameter
+      a       owl:Class ;
+      rdfs:subClassOf prov:Role .
+
+:PostID
+      a       :Parameter , owl:NamedIndividual .
+
+:FacebookDataSet
+      a       owl:NamedIndividual , :DataSet .
+
+:matches
+      a       owl:ObjectProperty ;
+      rdfs:subPropertyOf skos:related .
+
+:doesNotMatch
+      a       owl:ObjectProperty ;
+      rdfs:subPropertyOf skos:related .
+
+:lessThan
+      a       owl:ObjectProperty ;
+      rdfs:subPropertyOf skos:related ;
+      owl:inverseOf :moreThan .
+
+:Regex
+      a       :Parameter , owl:NamedIndividual .
+
+:XOR_Node
+      a       owl:Class ;
+      rdfs:comment "A concept describing an inner node of a binary tree structure. The node represents the logical operator XOR in a binary tree description of pope:Constraint. If A is an XOR_Node and B and C are children of A then a test on conditions specified by B XOR C equaled true."@en ;
+      rdfs:label "XOR Node"@en ;
+      rdfs:subClassOf skos:Concept .
+
+:rhs  a       owl:ObjectProperty .
+
+:DataCollection
+      a       owl:Class ;
+      rdfs:comment "A kind of data processing activity plan describing the process of data gathering (e.g. manual collection, collection using an API etc.)"@en ;
+      rdfs:label "Data Collection"@en ;
+      rdfs:subClassOf :ActivityPlan .
+
+:Location
+      a       :Parameter , owl:NamedIndividual .
+
+:moreThan
+      a       owl:ObjectProperty ;
+      rdfs:subPropertyOf skos:related .
+
+:OR_Node
+      a       owl:Class ;
+      rdfs:comment "A concept describing an inner node of a binary tree structure. The node represents the logical operator OR  in a binary tree description of pope:Constraint. If A is an OR_Node and B and C are children of A then a test on conditions specified by B OR C equaled true."@en ;
+      rdfs:label "OR Node"@en ;
+      rdfs:subClassOf skos:Concept .
+
+:CollectionViaApi
+      a       :DataCollection , :ActivityPlan , owl:NamedIndividual .
+
+:lessThanOrEqualTo
+      a       owl:ObjectProperty ;
+      rdfs:subPropertyOf skos:related .
+
+:DataAnalysis
+      a       owl:Class ;
+      rdfs:comment "A kind of data processing activity plan describing the process of data analysis (e.g. sentiment analysis, word frequency count, etc.)"@en ;
+      rdfs:label "Data Analysis"@en ;
+      rdfs:subClassOf :ActivityPlan .
+
+:StatisticalMeasure
+      a       :Parameter , owl:NamedIndividual .
+
+:ManualCollection
+      a       owl:NamedIndividual , :DataSet .
+
+:ManualDataCollection
+      a       :DataCollection , :ActivityPlan , owl:NamedIndividual .
+
+:TwitterDataset
+      a       owl:NamedIndividual , :DataSet .
+
+:moreThanOrEqualTo
+      a       owl:ObjectProperty ;
+      rdfs:subPropertyOf skos:related .
+
+:AND_Node
+      a       owl:Class ;
+      rdfs:comment "A concept describing an inner node of a binary tree structure. The node represents the logical operator AND in a binary tree description of pope:Constraint. If A is an XOR_Node and B and C are children of A then a test on conditions specified by B AND C equaled true."@en ;
+      rdfs:label "And Node"@en ;
+      rdfs:subClassOf skos:Concept .
+
+:PopeSkosSchema
+      a       owl:NamedIndividual , skos:ConceptScheme .
+
+:Constraint
+      a       owl:Class ;
+      rdfs:subClassOf prov:Role .
+
+:appliesTo
+      a       owl:ObjectProperty ;
+      rdfs:subPropertyOf skos:related .
+
+:LeafNode
+      a       owl:Class ;
+      rdfs:comment """A concept describing a leaf node of a binary tree structure. The node is used to bind a 
+a binary tree description of pope:Constraint to a specific pope:Parameter wich captures an aspect of the state of the world via subproperties of skos:related defined in PoPE. For eample, a parameter representing a keyword being included in a piece of text."""@en ;
+      rdfs:label "Leaf Node"@en ;
+      rdfs:subClassOf skos:Concept .
+
+:DataRemoval
+      a       :ActivityPlan , owl:NamedIndividual , :DataPreprocessing .
+
+:TxtToUpperCase
+      a       :ActivityPlan , owl:NamedIndividual , :DataPreprocessing .
+
+:subsumes
+      a       owl:ObjectProperty ;
+      rdfs:subPropertyOf skos:related .
+
+:WordFrequencyCount
+      a       :ActivityPlan , owl:NamedIndividual .
+
+:DataSet
+      a       owl:Class ;
+      rdfs:subClassOf prov:Role .
+
+:ApiEndpoint
+      a       :Parameter , owl:NamedIndividual .
+
+:Keyword
+      a       :Parameter , owl:NamedIndividual .
+
+:notIncludedIn
+      a       owl:ObjectProperty ;
+      rdfs:subPropertyOf skos:related .
+
+:DataFiltering
+      a       :ActivityPlan , owl:NamedIndividual , :DataPreprocessing .
+
+:GroupTag
+      a       :Parameter , owl:NamedIndividual .
+
+:ActivityPlan
+      a       owl:Class ;
+      rdfs:comment "A concept describing a high level plan of a data processing activity."@en ;
+      rdfs:label "Activity Plan"@en ;
+      rdfs:subClassOf prov:Plan .
+
+:lhs  a       owl:ObjectProperty .
+
+:DataPreprocessing
+      a       owl:Class ;
+      rdfs:comment "A kind of data processing activity plan describing the process of data preprocessing (e.g. stop words removal, filtering, text case transformation, etc.)"@en ;
+      rdfs:label "Data Preprocessing"@en ;
+      rdfs:subClassOf :ActivityPlan .
+
+:TopicExtraction
+      a       :ActivityPlan , owl:NamedIndividual , :DataAnalysis .
+
+:Precondition
+      a       :Constraint , owl:NamedIndividual .
+
+:Time
+      a       :Parameter , owl:NamedIndividual .
+
+:Postcondition
+      a       :Constraint , owl:NamedIndividual .
+
+:NewsArticlesDataSet
+      a       owl:NamedIndividual , :DataSet .
+
+:includedIn
+      a       owl:ObjectProperty ;
+      rdfs:subPropertyOf skos:related .
+
+:isEqualTo
+      a       owl:SymmetricProperty , owl:ObjectProperty ;
+      rdfs:subPropertyOf skos:related .
+
+:SentimentDetection
+      a       :ActivityPlan , owl:NamedIndividual , :DataAnalysis .
+
+:TxtToLowerCase
+      a       :ActivityPlan , owl:NamedIndividual , :DataPreprocessing .
+
+:TextObject
+      a       :Parameter , owl:NamedIndividual .
+
+<http://w3id.org/abdn/policy/pope>
+      a       owl:Ontology ;
+      rdfs:label "PoPE Version 1.0"^^xsd:string ;
+      terms:creator "Peter Edwards"^^xsd:string , "Milan Markovic"^^xsd:string , "David Corsar"^^xsd:string , "Chenghua Lin"^^xsd:string ;
+      terms:description "The PoPE Provenance Vocabulary defines a set of concepts and terms (the vocabulary)  for describing the use of social media data as evidence in policy-making."^^xsd:string ;
+      terms:license "https://creativecommons.org/licenses/by/4.0/"^^xsd:string ;
+      owl:imports <http://www.w3.org/ns/prov-o-20130430> , <http://www.w3.org/2004/02/skos/core> ;
+      owl:versionInfo "1.0"^^xsd:string .
+
+:parameter
+      a       owl:ObjectProperty .
+
+:describedAs
+      a       owl:ObjectProperty ;
+      rdfs:subPropertyOf skos:narrower .

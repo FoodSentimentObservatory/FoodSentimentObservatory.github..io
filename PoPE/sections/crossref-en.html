@@ -1,0 +1,1124 @@
+<h2  id="crossreference" class="list">Cross reference for PoPE Version 1.0 classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by PoPE Version 1.0.
+<div id="classes">
+   <h3 id="classes" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#ActivityPlan" title="http://w3id.org/abdn/policy/pope#ActivityPlan">Activity Plan</a>
+      </li>
+      <li>
+         <a href="#AND_Node" title="http://w3id.org/abdn/policy/pope#AND_Node">And Node</a>
+      </li>
+      <li>
+         <a href="#Constraint" title="http://w3id.org/abdn/policy/pope#Constraint">
+            <span>constraint</span>
+         </a>
+      </li>
+      <li>
+         <a href="#DataAnalysis" title="http://w3id.org/abdn/policy/pope#DataAnalysis">Data Analysis</a>
+      </li>
+      <li>
+         <a href="#DataCollection" title="http://w3id.org/abdn/policy/pope#DataCollection">Data Collection</a>
+      </li>
+      <li>
+         <a href="#DataPreprocessing"
+            title="http://w3id.org/abdn/policy/pope#DataPreprocessing">Data Preprocessing</a>
+      </li>
+      <li>
+         <a href="#DataSet" title="http://w3id.org/abdn/policy/pope#DataSet">
+            <span>data set</span>
+         </a>
+      </li>
+      <li>
+         <a href="#LeafNode" title="http://w3id.org/abdn/policy/pope#LeafNode">Leaf Node</a>
+      </li>
+      <li>
+         <a href="#OR_Node" title="http://w3id.org/abdn/policy/pope#OR_Node">OR Node</a>
+      </li>
+      <li>
+         <a href="#Parameter" title="http://w3id.org/abdn/policy/pope#Parameter">
+            <span>parameter</span>
+         </a>
+      </li>
+      <li>
+         <a href="#XOR_Node" title="http://w3id.org/abdn/policy/pope#XOR_Node">XOR Node</a>
+      </li>
+   </ul>
+   <div class="entity" id="ActivityPlan">
+      <h3>Activity Plan<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#ActivityPlan</p>
+      <div class="comment">
+         <span class="markdown">A concept describing a high level plan of a data processing activity.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/ns/prov#Plan">plan</span>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#DataAnalysis" title="http://w3id.org/abdn/policy/pope#DataAnalysis">Data Analysis</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#DataCollection" title="http://w3id.org/abdn/policy/pope#DataCollection">Data Collection</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#DataPreprocessing"
+               title="http://w3id.org/abdn/policy/pope#DataPreprocessing">Data Preprocessing</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#CollectionViaApi"
+               title="http://w3id.org/abdn/policy/pope#CollectionViaApi">collection via api</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#DataFiltering" title="http://w3id.org/abdn/policy/pope#DataFiltering">data filtering</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#DataRemoval" title="http://w3id.org/abdn/policy/pope#DataRemoval">data removal</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#ManualDataCollection"
+               title="http://w3id.org/abdn/policy/pope#ManualDataCollection">manual data collection</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#SentimentDetection"
+               title="http://w3id.org/abdn/policy/pope#SentimentDetection">sentiment detection</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#TopicExtraction" title="http://w3id.org/abdn/policy/pope#TopicExtraction">topic extraction</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#TxtToLowerCase" title="http://w3id.org/abdn/policy/pope#TxtToLowerCase">txt to lower case</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#TxtToUpperCase" title="http://w3id.org/abdn/policy/pope#TxtToUpperCase">txt to upper case</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#WordFrequencyCount"
+               title="http://w3id.org/abdn/policy/pope#WordFrequencyCount">word frequency count</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="AND_Node">
+      <h3>And Node<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#AND_Node</p>
+      <div class="comment">
+         <span class="markdown">A concept describing an inner node of a binary tree structure. The node represents the logical operator AND in a binary tree description of pope:Constraint. If A is an XOR_Node and B and C are children of A then a test on conditions specified by B AND C equaled true.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/2004/02/skos/core#Concept">concept</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Constraint">
+      <h3>constraint<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#Constraint</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/ns/prov#Role">role</span>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#Postcondition" title="http://w3id.org/abdn/policy/pope#Postcondition">postcondition</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Precondition" title="http://w3id.org/abdn/policy/pope#Precondition">precondition</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DataAnalysis">
+      <h3>Data Analysis<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#DataAnalysis</p>
+      <div class="comment">
+         <span class="markdown">A kind of data processing activity plan describing the process of data analysis (e.g. sentiment analysis, word frequency count, etc.)</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#ActivityPlan" title="http://w3id.org/abdn/policy/pope#ActivityPlan">Activity Plan</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#SentimentDetection"
+               title="http://w3id.org/abdn/policy/pope#SentimentDetection">sentiment detection</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#TopicExtraction" title="http://w3id.org/abdn/policy/pope#TopicExtraction">topic extraction</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DataCollection">
+      <h3>Data Collection<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#DataCollection</p>
+      <div class="comment">
+         <span class="markdown">A kind of data processing activity plan describing the process of data gathering (e.g. manual collection, collection using an API etc.)</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#ActivityPlan" title="http://w3id.org/abdn/policy/pope#ActivityPlan">Activity Plan</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#CollectionViaApi"
+               title="http://w3id.org/abdn/policy/pope#CollectionViaApi">collection via api</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#ManualDataCollection"
+               title="http://w3id.org/abdn/policy/pope#ManualDataCollection">manual data collection</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DataPreprocessing">
+      <h3>Data Preprocessing<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#DataPreprocessing</p>
+      <div class="comment">
+         <span class="markdown">A kind of data processing activity plan describing the process of data preprocessing (e.g. stop words removal, filtering, text case transformation, etc.)</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#ActivityPlan" title="http://w3id.org/abdn/policy/pope#ActivityPlan">Activity Plan</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#DataFiltering" title="http://w3id.org/abdn/policy/pope#DataFiltering">data filtering</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#DataRemoval" title="http://w3id.org/abdn/policy/pope#DataRemoval">data removal</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#TxtToLowerCase" title="http://w3id.org/abdn/policy/pope#TxtToLowerCase">txt to lower case</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#TxtToUpperCase" title="http://w3id.org/abdn/policy/pope#TxtToUpperCase">txt to upper case</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DataSet">
+      <h3>data set<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#DataSet</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/ns/prov#Role">role</span>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#FacebookDataSet" title="http://w3id.org/abdn/policy/pope#FacebookDataSet">facebook data set</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#ManualCollection"
+               title="http://w3id.org/abdn/policy/pope#ManualCollection">manual collection</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#NewsArticlesDataSet"
+               title="http://w3id.org/abdn/policy/pope#NewsArticlesDataSet">news articles data set</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#TwitterDataset" title="http://w3id.org/abdn/policy/pope#TwitterDataset">twitter dataset</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="LeafNode">
+      <h3>Leaf Node<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#LeafNode</p>
+      <div class="comment">
+         <span class="markdown">A concept describing a leaf node of a binary tree structure. The node is used to bind a 
+a binary tree description of pope:Constraint to a specific pope:Parameter wich captures an aspect of the state of the world via subproperties of skos:related defined in PoPE. For eample, a parameter representing a keyword being included in a piece of text.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/2004/02/skos/core#Concept">concept</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="OR_Node">
+      <h3>OR Node<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#OR_Node</p>
+      <div class="comment">
+         <span class="markdown">A concept describing an inner node of a binary tree structure. The node represents the logical operator OR  in a binary tree description of pope:Constraint. If A is an OR_Node and B and C are children of A then a test on conditions specified by B OR C equaled true.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/2004/02/skos/core#Concept">concept</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Parameter">
+      <h3>parameter<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#Parameter</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/ns/prov#Role">role</span>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#ApiEndpoint" title="http://w3id.org/abdn/policy/pope#ApiEndpoint">api endpoint</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#GroupTag" title="http://w3id.org/abdn/policy/pope#GroupTag">group tag</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Keyword" title="http://w3id.org/abdn/policy/pope#Keyword">keyword</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Location" title="http://w3id.org/abdn/policy/pope#Location">location</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#PostID" title="http://w3id.org/abdn/policy/pope#PostID">post i d</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Regex" title="http://w3id.org/abdn/policy/pope#Regex">regex</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#StatisticalMeasure"
+               title="http://w3id.org/abdn/policy/pope#StatisticalMeasure">statistical measure</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#TextObject" title="http://w3id.org/abdn/policy/pope#TextObject">text object</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#Time" title="http://w3id.org/abdn/policy/pope#Time">time</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="XOR_Node">
+      <h3>XOR Node<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#XOR_Node</p>
+      <div class="comment">
+         <span class="markdown">A concept describing an inner node of a binary tree structure. The node represents the logical operator XOR in a binary tree description of pope:Constraint. If A is an XOR_Node and B and C are children of A then a test on conditions specified by B XOR C equaled true.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/2004/02/skos/core#Concept">concept</span>
+         </dd>
+      </dl>
+   </div>
+</div><div id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#appliesTo" title="http://w3id.org/abdn/policy/pope#appliesTo">
+            <span>applies to</span>
+         </a>
+      </li>
+      <li>
+         <a href="#describedAs" title="http://w3id.org/abdn/policy/pope#describedAs">
+            <span>described as</span>
+         </a>
+      </li>
+      <li>
+         <a href="#doesNotMatch" title="http://w3id.org/abdn/policy/pope#doesNotMatch">
+            <span>does not match</span>
+         </a>
+      </li>
+      <li>
+         <a href="#includedIn" title="http://w3id.org/abdn/policy/pope#includedIn">
+            <span>included in</span>
+         </a>
+      </li>
+      <li>
+         <a href="#isEqualTo" title="http://w3id.org/abdn/policy/pope#isEqualTo">
+            <span>is equal to</span>
+         </a>
+      </li>
+      <li>
+         <a href="#lessThan" title="http://w3id.org/abdn/policy/pope#lessThan">
+            <span>less than</span>
+         </a>
+      </li>
+      <li>
+         <a href="#lessThanOrEqualTo"
+            title="http://w3id.org/abdn/policy/pope#lessThanOrEqualTo">
+            <span>less than or equal to</span>
+         </a>
+      </li>
+      <li>
+         <a href="#matches" title="http://w3id.org/abdn/policy/pope#matches">
+            <span>matches</span>
+         </a>
+      </li>
+      <li>
+         <a href="#moreThan" title="http://w3id.org/abdn/policy/pope#moreThan">
+            <span>more than</span>
+         </a>
+      </li>
+      <li>
+         <a href="#moreThanOrEqualTo"
+            title="http://w3id.org/abdn/policy/pope#moreThanOrEqualTo">
+            <span>more than or equal to</span>
+         </a>
+      </li>
+      <li>
+         <a href="#notIncludedIn" title="http://w3id.org/abdn/policy/pope#notIncludedIn">
+            <span>not included in</span>
+         </a>
+      </li>
+      <li>
+         <a href="#subsumes" title="http://w3id.org/abdn/policy/pope#subsumes">
+            <span>subsumes</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="appliesTo">
+      <h3>applies to<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#appliesTo</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2004/02/skos/core#related">related</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="describedAs">
+      <h3>described as<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#describedAs</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2004/02/skos/core#narrower">narrower</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="doesNotMatch">
+      <h3>does not match<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#doesNotMatch</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2004/02/skos/core#related">related</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="includedIn">
+      <h3>included in<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#includedIn</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2004/02/skos/core#related">related</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isEqualTo">
+      <h3>is equal to<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#isEqualTo</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> symmetric</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2004/02/skos/core#related">related</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="lessThan">
+      <h3>less than<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#lessThan</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2004/02/skos/core#related">related</span>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#moreThan" title="http://w3id.org/abdn/policy/pope#moreThan">more than</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="lessThanOrEqualTo">
+      <h3>less than or equal to<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#lessThanOrEqualTo</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2004/02/skos/core#related">related</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="matches">
+      <h3>matches<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#matches</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2004/02/skos/core#related">related</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="moreThan">
+      <h3>more than<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#moreThan</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2004/02/skos/core#related">related</span>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#lessThan" title="http://w3id.org/abdn/policy/pope#lessThan">less than</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="moreThanOrEqualTo">
+      <h3>more than or equal to<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#moreThanOrEqualTo</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2004/02/skos/core#related">related</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="notIncludedIn">
+      <h3>not included in<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#notIncludedIn</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2004/02/skos/core#related">related</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="subsumes">
+      <h3>subsumes<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#subsumes</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2004/02/skos/core#related">related</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#ApiEndpoint" title="http://w3id.org/abdn/policy/pope#ApiEndpoint">
+            <span>api endpoint</span>
+         </a>
+      </li>
+      <li>
+         <a href="#CollectionViaApi"
+            title="http://w3id.org/abdn/policy/pope#CollectionViaApi">
+            <span>collection via api</span>
+         </a>
+      </li>
+      <li>
+         <a href="#DataFiltering" title="http://w3id.org/abdn/policy/pope#DataFiltering">
+            <span>data filtering</span>
+         </a>
+      </li>
+      <li>
+         <a href="#DataRemoval" title="http://w3id.org/abdn/policy/pope#DataRemoval">
+            <span>data removal</span>
+         </a>
+      </li>
+      <li>
+         <a href="#FacebookDataSet" title="http://w3id.org/abdn/policy/pope#FacebookDataSet">
+            <span>facebook data set</span>
+         </a>
+      </li>
+      <li>
+         <a href="#GroupTag" title="http://w3id.org/abdn/policy/pope#GroupTag">
+            <span>group tag</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Keyword" title="http://w3id.org/abdn/policy/pope#Keyword">
+            <span>keyword</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Location" title="http://w3id.org/abdn/policy/pope#Location">
+            <span>location</span>
+         </a>
+      </li>
+      <li>
+         <a href="#ManualCollection"
+            title="http://w3id.org/abdn/policy/pope#ManualCollection">
+            <span>manual collection</span>
+         </a>
+      </li>
+      <li>
+         <a href="#ManualDataCollection"
+            title="http://w3id.org/abdn/policy/pope#ManualDataCollection">
+            <span>manual data collection</span>
+         </a>
+      </li>
+      <li>
+         <a href="#NewsArticlesDataSet"
+            title="http://w3id.org/abdn/policy/pope#NewsArticlesDataSet">
+            <span>news articles data set</span>
+         </a>
+      </li>
+      <li>
+         <a href="#PopeSkosSchema" title="http://w3id.org/abdn/policy/pope#PopeSkosSchema">
+            <span>pope skos schema</span>
+         </a>
+      </li>
+      <li>
+         <a href="#PostID" title="http://w3id.org/abdn/policy/pope#PostID">
+            <span>post i d</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Postcondition" title="http://w3id.org/abdn/policy/pope#Postcondition">
+            <span>postcondition</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Precondition" title="http://w3id.org/abdn/policy/pope#Precondition">
+            <span>precondition</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Regex" title="http://w3id.org/abdn/policy/pope#Regex">
+            <span>regex</span>
+         </a>
+      </li>
+      <li>
+         <a href="#SentimentDetection"
+            title="http://w3id.org/abdn/policy/pope#SentimentDetection">
+            <span>sentiment detection</span>
+         </a>
+      </li>
+      <li>
+         <a href="#StatisticalMeasure"
+            title="http://w3id.org/abdn/policy/pope#StatisticalMeasure">
+            <span>statistical measure</span>
+         </a>
+      </li>
+      <li>
+         <a href="#TextObject" title="http://w3id.org/abdn/policy/pope#TextObject">
+            <span>text object</span>
+         </a>
+      </li>
+      <li>
+         <a href="#Time" title="http://w3id.org/abdn/policy/pope#Time">
+            <span>time</span>
+         </a>
+      </li>
+      <li>
+         <a href="#TopicExtraction" title="http://w3id.org/abdn/policy/pope#TopicExtraction">
+            <span>topic extraction</span>
+         </a>
+      </li>
+      <li>
+         <a href="#TwitterDataset" title="http://w3id.org/abdn/policy/pope#TwitterDataset">
+            <span>twitter dataset</span>
+         </a>
+      </li>
+      <li>
+         <a href="#TxtToLowerCase" title="http://w3id.org/abdn/policy/pope#TxtToLowerCase">
+            <span>txt to lower case</span>
+         </a>
+      </li>
+      <li>
+         <a href="#TxtToUpperCase" title="http://w3id.org/abdn/policy/pope#TxtToUpperCase">
+            <span>txt to upper case</span>
+         </a>
+      </li>
+      <li>
+         <a href="#WordFrequencyCount"
+            title="http://w3id.org/abdn/policy/pope#WordFrequencyCount">
+            <span>word frequency count</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="ApiEndpoint">
+      <h3>api endpoint<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#ApiEndpoint</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Parameter" title="http://w3id.org/abdn/policy/pope#Parameter">parameter</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CollectionViaApi">
+      <h3>collection via api<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#CollectionViaApi</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#ActivityPlan" title="http://w3id.org/abdn/policy/pope#ActivityPlan">Activity Plan</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#DataCollection" title="http://w3id.org/abdn/policy/pope#DataCollection">Data Collection</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DataFiltering">
+      <h3>data filtering<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#DataFiltering</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#ActivityPlan" title="http://w3id.org/abdn/policy/pope#ActivityPlan">Activity Plan</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#DataPreprocessing"
+               title="http://w3id.org/abdn/policy/pope#DataPreprocessing">Data Preprocessing</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DataRemoval">
+      <h3>data removal<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#DataRemoval</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#ActivityPlan" title="http://w3id.org/abdn/policy/pope#ActivityPlan">Activity Plan</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#DataPreprocessing"
+               title="http://w3id.org/abdn/policy/pope#DataPreprocessing">Data Preprocessing</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FacebookDataSet">
+      <h3>facebook data set<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#FacebookDataSet</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#DataSet" title="http://w3id.org/abdn/policy/pope#DataSet">data set</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="GroupTag">
+      <h3>group tag<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#GroupTag</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Parameter" title="http://w3id.org/abdn/policy/pope#Parameter">parameter</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Keyword">
+      <h3>keyword<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#Keyword</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Parameter" title="http://w3id.org/abdn/policy/pope#Parameter">parameter</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Location">
+      <h3>location<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#Location</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Parameter" title="http://w3id.org/abdn/policy/pope#Parameter">parameter</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ManualCollection">
+      <h3>manual collection<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#ManualCollection</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#DataSet" title="http://w3id.org/abdn/policy/pope#DataSet">data set</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ManualDataCollection">
+      <h3>manual data collection<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#ManualDataCollection</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#ActivityPlan" title="http://w3id.org/abdn/policy/pope#ActivityPlan">Activity Plan</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#DataCollection" title="http://w3id.org/abdn/policy/pope#DataCollection">Data Collection</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="NewsArticlesDataSet">
+      <h3>news articles data set<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#NewsArticlesDataSet</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#DataSet" title="http://w3id.org/abdn/policy/pope#DataSet">data set</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PopeSkosSchema">
+      <h3>pope skos schema<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#PopeSkosSchema</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <span class="dotted"
+                  title="http://www.w3.org/2004/02/skos/core#ConceptScheme">concept scheme</span>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PostID">
+      <h3>post i d<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#PostID</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Parameter" title="http://w3id.org/abdn/policy/pope#Parameter">parameter</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Postcondition">
+      <h3>postcondition<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#Postcondition</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Constraint" title="http://w3id.org/abdn/policy/pope#Constraint">constraint</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Precondition">
+      <h3>precondition<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#Precondition</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Constraint" title="http://w3id.org/abdn/policy/pope#Constraint">constraint</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Regex">
+      <h3>regex<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#Regex</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Parameter" title="http://w3id.org/abdn/policy/pope#Parameter">parameter</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SentimentDetection">
+      <h3>sentiment detection<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#SentimentDetection</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#ActivityPlan" title="http://w3id.org/abdn/policy/pope#ActivityPlan">Activity Plan</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#DataAnalysis" title="http://w3id.org/abdn/policy/pope#DataAnalysis">Data Analysis</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="StatisticalMeasure">
+      <h3>statistical measure<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#StatisticalMeasure</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Parameter" title="http://w3id.org/abdn/policy/pope#Parameter">parameter</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="TextObject">
+      <h3>text object<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#TextObject</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Parameter" title="http://w3id.org/abdn/policy/pope#Parameter">parameter</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Time">
+      <h3>time<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#Time</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Parameter" title="http://w3id.org/abdn/policy/pope#Parameter">parameter</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="TopicExtraction">
+      <h3>topic extraction<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#TopicExtraction</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#ActivityPlan" title="http://w3id.org/abdn/policy/pope#ActivityPlan">Activity Plan</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#DataAnalysis" title="http://w3id.org/abdn/policy/pope#DataAnalysis">Data Analysis</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="TwitterDataset">
+      <h3>twitter dataset<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#TwitterDataset</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#DataSet" title="http://w3id.org/abdn/policy/pope#DataSet">data set</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="TxtToLowerCase">
+      <h3>txt to lower case<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#TxtToLowerCase</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#ActivityPlan" title="http://w3id.org/abdn/policy/pope#ActivityPlan">Activity Plan</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#DataPreprocessing"
+               title="http://w3id.org/abdn/policy/pope#DataPreprocessing">Data Preprocessing</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="TxtToUpperCase">
+      <h3>txt to upper case<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#TxtToUpperCase</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#ActivityPlan" title="http://w3id.org/abdn/policy/pope#ActivityPlan">Activity Plan</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#DataPreprocessing"
+               title="http://w3id.org/abdn/policy/pope#DataPreprocessing">Data Preprocessing</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="WordFrequencyCount">
+      <h3>word frequency count<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#WordFrequencyCount</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#ActivityPlan" title="http://w3id.org/abdn/policy/pope#ActivityPlan">Activity Plan</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div>
