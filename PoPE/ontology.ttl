@@ -9,93 +9,96 @@
 
 :Parameter
       a       owl:Class ;
+      rdfs:comment "A kind of role describing that the associated prov:Entity denoted an activity parameter containing some information used in some data processing activity."@en ;
       rdfs:label "Parameter"@en ;
       rdfs:subClassOf prov:Role .
 
 :PostID
-      a       :Parameter , owl:NamedIndividual .
+      a       :Parameter , owl:NamedIndividual ;
+      rdfs:comment "A role describing that the associated prov:Entity denoted an activity parameter containing some information about an ID of a social media post used in some data processing activity."@en ;
+      rdfs:label "Post ID"@en .
 
-[]    a       owl:Axiom ;
-      rdfs:comment "An activity postcondition describes a state of the world that generated entities conformed to. The state is described as logical groupings of one or more pope:Parameter use dby the activity and semantically linked with subproperties of skos:related to some characterists of generated datasets or dataset items."@en ;
-      rdfs:label "Postcondition"@en ;
-      owl:annotatedProperty
-              rdf:type ;
-      owl:annotatedSource :Postcondition ;
-      owl:annotatedTarget :Constraint .
-
-:FacebookDataSet
-      a       owl:NamedIndividual , :DataSet .
+:LDA_TopicExtraction
+      a       :ActivityPlan , owl:NamedIndividual , :DataAnalysis , :TopicExtraction ;
+      rdfs:comment "A topic extraction utilising the LDA algorithm."@en ;
+      rdfs:label "Latent Dirichlet Allocation Topic Exctraction"@en .
 
 :matches
       a       owl:ObjectProperty ;
+      rdfs:comment "A matches B denotes that the expression described by the instance A can be matched on some value described by the instance B. For example, if A describes a regular expression, it can be matched on a piece of text described by B."@en ;
       rdfs:label "matches"@en ;
       rdfs:subPropertyOf skos:related .
 
 :doesNotMatch
       a       owl:ObjectProperty ;
+      rdfs:comment "A matches B denotes that the expression described by the instance A cannot be matched on some value described by the instance B. For example, if A describes a regular expression, it cannnot be matched on a piece of text described by B."@en ;
       rdfs:label "doesNotMatch"@en ;
       rdfs:subPropertyOf skos:related .
 
 :lessThan
       a       owl:ObjectProperty ;
+      rdfs:comment "A lessThan B denotes that the quantity represented by instance A is lower than the quantity represented by instance B."@en ;
       rdfs:label "lessThan"@en ;
       rdfs:subPropertyOf skos:related ;
       owl:inverseOf :moreThan .
 
 :Regex
-      a       :Parameter , owl:NamedIndividual .
+      a       :Parameter , owl:NamedIndividual ;
+      rdfs:comment "A role describing that the associated prov:Entity denoted an activity parameter containing some information about a regular expression used in some data processing activity."@en , "Regex"@en .
 
 :XOR_Node
       a       owl:Class ;
-      rdfs:comment "A concept describing an inner node of a binary tree structure. The node represents the logical operator XOR in a binary tree description of pope:Constraint. If A is an XOR_Node and B and C are children of A then a test on conditions specified by B XOR C equaled true."@en ;
+      rdfs:comment "A concept describing an inner node of a binary tree structure. The node represents the logical operator XOR in a binary tree description of pope:Constraint. If A is an XOR_Node and B and C are children of A then test on conditions specified by B XOR C equals true."@en ;
       rdfs:label "XOR Node"@en ;
       rdfs:subClassOf skos:Concept .
 
 :includes
       a       owl:ObjectProperty ;
+      rdfs:comment "A includes B denotes that the instance A describes a concept that includes B. For example, if A is describing an area covering the UK, B can describe the city of London."@en ;
       rdfs:label "includes"@en ;
       rdfs:subPropertyOf skos:related .
 
 :rhs  a       owl:FunctionalProperty , owl:ObjectProperty ;
       rdfs:comment "A property linking a parent node of a binary tree to its right hand side child."@en ;
-      rdfs:domain :OR_Node , :AND_Node , :XOR_Node ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (:AND_Node :OR_Node :XOR_Node)
+              ] ;
       rdfs:label "rhs"@en ;
-      rdfs:range :LeafNode , :OR_Node , :AND_Node , :XOR_Node .
+      rdfs:range
+              [ a       owl:Class ;
+                owl:unionOf (:AND_Node :LeafNode :OR_Node :XOR_Node)
+              ] ;
+      rdfs:subPropertyOf skos:related .
 
 :DataCollection
       a       owl:Class ;
-      rdfs:comment "A kind of data processing activity plan describing the process of data gathering (e.g. manual collection, collection using an API etc.)"@en ;
+      rdfs:comment "A kind of  activity plan describing the process of data gathering (e.g. manual collection, collection using an API etc.)"@en ;
       rdfs:label "Data Collection"@en ;
       rdfs:subClassOf :ActivityPlan .
 
 :Location
-      a       :Parameter , owl:NamedIndividual .
+      a       :Parameter , owl:NamedIndividual ;
+      rdfs:comment "A role describing that the associated prov:Entity denoted an activity parameter containing some information about a location used in some data processing activity."@en ;
+      rdfs:label "Location"@en .
 
 :moreThan
       a       owl:ObjectProperty ;
+      rdfs:comment "A moreThan B denotes that the quantity represented by instance A is greater than the quantity represented by instance B."@en ;
       rdfs:label "moreThan"@en ;
       rdfs:subPropertyOf skos:related .
 
 :OR_Node
       a       owl:Class ;
-      rdfs:comment "A concept describing an inner node of a binary tree structure. The node represents the logical operator OR  in a binary tree description of pope:Constraint. If A is an OR_Node and B and C are children of A then a test on conditions specified by B OR C equaled true."@en ;
+      rdfs:comment "A concept describing an inner node of a binary tree structure. The node represents the logical operator OR  in a binary tree description of pope:Constraint. If A is an OR_Node and B and C are children of A then  test on conditions specified by B OR C equals true."@en ;
       rdfs:label "OR Node"@en ;
-      rdfs:subClassOf skos:Concept .
+      rdfs:subClassOf skos:Concept ;
+      owl:disjointWith :XOR_Node .
 
 :CollectionViaApi
-      a       :DataCollection , :ActivityPlan , owl:NamedIndividual .
-
-:lessThanOrEqualTo
-      a       owl:ObjectProperty ;
-      rdfs:label "lessThanOrEqualTo"@en ;
-      rdfs:subPropertyOf skos:related ;
-      owl:inverseOf :moreThanOrEqualTo .
-
-:DataAnalysis
-      a       owl:Class ;
-      rdfs:comment "A kind of data processing activity plan describing the process of data analysis (e.g. sentiment analysis, word frequency count, etc.)"@en ;
-      rdfs:label "Data Analysis"@en ;
-      rdfs:subClassOf :ActivityPlan .
+      a       :DataCollection , :ActivityPlan , owl:NamedIndividual ;
+      rdfs:comment "Collection of data retrieved via an API."@en ;
+      rdfs:label "Collection via API"@en .
 
 []    a       owl:Axiom ;
       rdfs:comment "A kind of activity plan describing a process converting text to lowercase. This kind of action is further described by prov:Entities used by the activity and described using pope:Parameter role, and associated PoPE subproperties of skos:related such as pope:includedIn, pope:subsumes, etc.   For example, and entity with role pope:Regex representing uppercase letters linked to some characteristics of entities (data items) generated by the activity via pope:doesNotMatch denotes that the generated entities contain a text that does not contain any uppercase letters (subject to further constriants imposed on the parameters described using pope:Constraint)."@en ;
@@ -105,22 +108,89 @@
       owl:annotatedSource :TextToLowerCase ;
       owl:annotatedTarget :DataPreprocessing .
 
+:lessThanOrEqualTo
+      a       owl:ObjectProperty ;
+      rdfs:comment "A lessThanOrEqualTo B denotes that the quantity represented by instance A is lower or equal to the quantity represented by instance B."@en ;
+      rdfs:label "lessThanOrEqualTo"@en ;
+      rdfs:subPropertyOf skos:related ;
+      owl:inverseOf :moreThanOrEqualTo .
+
+:DataAnalysis
+      a       owl:Class ;
+      rdfs:comment "A kind of  activity plan describing the process of data analysis (e.g. sentiment analysis, word frequency count, etc.)"@en ;
+      rdfs:label "Data Analysis"@en ;
+      rdfs:subClassOf :ActivityPlan .
+
 :StatisticalMeasure
-      a       :Parameter , owl:NamedIndividual .
-
-:ManualCollection
-      a       owl:NamedIndividual , :DataSet .
-
-:ManualDataCollection
-      a       :DataCollection , :ActivityPlan , owl:NamedIndividual .
+      a       :Parameter , owl:NamedIndividual ;
+      rdfs:comment "A role describing that the associated prov:Entity denoted an activity parameter containing some information about a statistical measure (e.g.  dataset size) used in some data processing activity."@en ;
+      rdfs:label "Statistical Measure"@en .
 
 :TwitterDataset
-      a       owl:NamedIndividual , :DataSet .
+      a       owl:NamedIndividual , :DataSet ;
+      rdfs:comment "A kind of role describing that the associated prov:Entity denoted a prov:Collection representing a collection of posts from Twitter social media platform."@en ;
+      rdfs:label "Twitter Dataset"@en .
 
 :moreThanOrEqualTo
       a       owl:ObjectProperty ;
-      rdfs:label "morethanOrEqualTo"@en ;
+      rdfs:comment "A moreThanOrEqualTo B denotes that the quantity represented by instance A is greater or equal to the quantity represented by instance B."@en ;
+      rdfs:label "moreThanOrEqualTo"@en ;
       rdfs:subPropertyOf skos:related .
+
+:MultiLayerPerceptronNeuralNetworksSentimentAnalysis
+      a       :ActivityPlan , owl:NamedIndividual , :DataAnalysis , :SentimentAnalysis ;
+      rdfs:comment "A sentiment analysis utilising the Multi-Layer Perceptron Neural Networks algorithm."@en ;
+      rdfs:label "Multi-Layer Perceptron Neural Networks Sentiment Analysis"@en .
+
+:AND_Node
+      a       owl:Class ;
+      rdfs:comment "A concept describing an inner node of a binary tree structure. The node represents the logical operator AND in a binary tree description of pope:Constraint. If A is an XOR_Node and B and C are children of A then test on conditions specified by B AND C equals true."@en ;
+      rdfs:label "AND Node"@en ;
+      rdfs:subClassOf skos:Concept ;
+      owl:disjointWith :LeafNode , :OR_Node , :XOR_Node .
+
+:PopeSkosSchema
+      a       owl:NamedIndividual , skos:ConceptScheme ;
+      rdfs:comment "PoPE skos schemea. Skos concepts defined using PoPE should be linked to this schema via skos:inSchema."@en ;
+      rdfs:label "PoPE Skos Schema"@en .
+
+:Constraint
+      a       owl:Class ;
+      rdfs:comment "A kind of role describing that the associated prov:Entity denoted some condition/state of the world further described by enties associated with role pope:Parameter. It can be further described with pope:describedAs property linking to a  skos:Concept. For example, a binary tree using pope:AND_Node, pope:OR_Node, pope:XOR_Node and pope:LeafNode can be used to represent logical groupings of one or more of activity parameters."@en ;
+      rdfs:label "Constraint"@en ;
+      rdfs:subClassOf prov:Role .
+
+:appliesTo
+      a       owl:ObjectProperty ;
+      rdfs:comment "A appliesTo B denotes that the instance A describes some concept relevant to B and where A is not part of B. For example, a license applied to a collection of data items."@en ;
+      rdfs:label "appliesTo"@en ;
+      rdfs:subPropertyOf skos:related .
+
+:LeafNode
+      a       owl:Class ;
+      rdfs:comment """A concept describing a leaf node of a binary tree structure. The node is used to bind a 
+a binary tree description of pope:Constraint to a specific pope:Parameter wich captures an aspect of the state of the world via subproperties of skos:related defined in PoPE. For eample, a parameter representing a keyword being included in a piece of text."""@en ;
+      rdfs:label "Leaf Node"@en ;
+      rdfs:subClassOf skos:Concept ;
+      owl:disjointWith :OR_Node , :XOR_Node .
+
+:DataRemoval
+      a       :ActivityPlan , owl:NamedIndividual , :DataPreprocessing ;
+      rdfs:comment "Removal of data based on some parameters."@en ;
+      rdfs:label "Data Removal"@en .
+
+:TextToUpperCase
+      a       :ActivityPlan , owl:NamedIndividual , :DataPreprocessing ;
+      rdfs:comment "Conversion of text to uppercase."@en ;
+      rdfs:label "Text To Upper Case"@en .
+
+[]    a       owl:Axiom ;
+      rdfs:comment "A kind of activity plan describing a process converting text to uppercase. This kind of action is further described by prov:Entities used by the activity and described using pope:Parameter role, and associated PoPE subproperties of skos:related such as pope:includedIn, pope:subsumes, etc.   For example, and entity with role pope:Regex representing lowercase letters linked to some characteristics of entities (data items) generated by the activity via pope:doesNotMatch denotes that the generated entities contain a text that does not contain any lowercase letters (subject to further constriants imposed on the parameters described using pope:Constraint)."@en ;
+      rdfs:label "Text to uppercase"@en ;
+      owl:annotatedProperty
+              rdf:type ;
+      owl:annotatedSource :TextToUpperCase ;
+      owl:annotatedTarget :DataPreprocessing .
 
 []    a       owl:Axiom ;
       rdfs:comment "A kind of activity plan describing some data removal process (e.g. a stop word removal). The kind of action is further described by prov:Entities used by the activity and described using pope:Parameter role, and associated PoPE subproperties of skos:related such as pope:includedIn, pope:subsumes, etc.  For example, and entity with role pope:Keyword linked to the entities generated by the filtering activity via pope:notIncludedIn denotes that the generated entities do not contain a specific keyword (subject to further constriants imposed on the parameters described using pope:Constraint)."@en ;
@@ -130,47 +200,102 @@
       owl:annotatedSource :DataRemoval ;
       owl:annotatedTarget :DataPreprocessing .
 
-:AND_Node
-      a       owl:Class ;
-      rdfs:comment "A concept describing an inner node of a binary tree structure. The node represents the logical operator AND in a binary tree description of pope:Constraint. If A is an XOR_Node and B and C are children of A then a test on conditions specified by B AND C equaled true."@en ;
-      rdfs:label "And Node"@en ;
-      rdfs:subClassOf skos:Concept .
+:SentimentAnalysisDataSet
+      a       owl:NamedIndividual , :DataSet ;
+      rdfs:comment "A kind of role describing that the associated prov:Entity denoted a prov:Collection representing  sentiment analysis results collection."@en ;
+      rdfs:label "Sentiment Analysis Dataset"@en .
 
-:PopeSkosSchema
-      a       owl:NamedIndividual , skos:ConceptScheme .
+:WordFrequencyCount
+      a       :ActivityPlan , owl:NamedIndividual , :DataAnalysis ;
+      rdfs:comment "Analysis of single word frequency in a piece of text. Can be restricted by parameters specifying the number of top frequent words returned."@en ;
+      rdfs:label "Word Frequency Count"@en .
 
-:Constraint
+:DataSet
       a       owl:Class ;
-      rdfs:comment "A concept denoting some condition/state of the world described by a pope:Parameter. It can be further described with pope:describedAs property linking to a  skos:Concept. For example, a binary tree using pope:AND_Node, pope:OR_Node, pope:XOR_Node and pope:LeafNode can be used to represent logical groupings of one or more of activity parameters."@en ;
-      rdfs:label "Constraint"@en ;
+      rdfs:comment "A kind of role describing that the associated prov:Entity denoted a prov:Collection representing some dataset - i.e. a collection of dataset items."@en ;
+      rdfs:label "Data Set"@en ;
       rdfs:subClassOf prov:Role .
 
-:appliesTo
+:ApiEndpoint
+      a       :Parameter , owl:NamedIndividual ;
+      rdfs:comment "A role describing that the associated prov:Entity denoted an activity parameter containing some information about an API reference endpoint used in some data processing activity."@en ;
+      rdfs:label "API Endpoint"@en .
+
+:Keyword
+      a       :Parameter , owl:NamedIndividual ;
+      rdfs:comment "A role describing that the associated prov:Entity denoted an activity parameter containing some information about a keyword used in some data processing activity."@en ;
+      rdfs:label "Keyword"@en .
+
+:notIncludedIn
       a       owl:ObjectProperty ;
-      rdfs:label "appliesTo"@en ;
+      rdfs:comment "A notIncludedIn B denotes that the instance A does not describe any part of instance B. For example, if B represents a piece of text, A can represent a keyword that is not present in B."@en ;
+      rdfs:label "notIncludedIn"@en ;
       rdfs:subPropertyOf skos:related .
 
-:LeafNode
-      a       owl:Class ;
-      rdfs:comment """A concept describing a leaf node of a binary tree structure. The node is used to bind a 
-a binary tree description of pope:Constraint to a specific pope:Parameter wich captures an aspect of the state of the world via subproperties of skos:related defined in PoPE. For eample, a parameter representing a keyword being included in a piece of text."""@en ;
-      rdfs:label "Leaf Node"@en ;
-      rdfs:subClassOf skos:Concept .
-
-:DataRemoval
-      a       :ActivityPlan , owl:NamedIndividual , :DataPreprocessing .
-
-:TextToUpperCase
+:DataFiltering
       a       :ActivityPlan , owl:NamedIndividual , :DataPreprocessing ;
-      rdfs:label "Text To Upper Case"@en .
+      rdfs:comment "Filtering of data based on some parameters."@en ;
+      rdfs:label "Data Filtering"@en .
+
+:GroupTag
+      a       :Parameter , owl:NamedIndividual ;
+      rdfs:comment "A role describing that the associated prov:Entity denoted an activity parameter containing some information about a group tag (e.g. to group multiple search activities) used in some data processing activity."@en ;
+      rdfs:label "Group Tag"@en .
 
 []    a       owl:Axiom ;
-      rdfs:comment "An activity precondition describes a state of the world that used entities conformed to. The state is described as logical groupings of one or more pope:Parameter used by the activity and semantically linked with subproperties of skos:related to some characterists of used datasets or dataset items."@en ;
-      rdfs:label "Precondition"@en ;
+      rdfs:comment "An activity postcondition describes a state of the world that generated entities conformed to. The state is described as logical groupings of one or more pope:Parameter use dby the activity and semantically linked with subproperties of skos:related to some characterists of generated datasets or dataset items."@en ;
+      rdfs:label "Postcondition"@en ;
       owl:annotatedProperty
               rdf:type ;
-      owl:annotatedSource :Precondition ;
+      owl:annotatedSource :Postcondition ;
       owl:annotatedTarget :Constraint .
+
+:ActivityPlan
+      a       owl:Class ;
+      rdfs:comment "ActivityPlans describe the type of plan followed by an agent to guide their activity in relation to, for example, collection of data, processing of data before analysis, or analysis of the data.  It is not the intent of ActivityPlan to provide a breakdown of the steps or actions that are involved in the plan; this type of information can, if desired, be represented with alternative plan representations."@en ;
+      rdfs:label "Activity Plan"@en ;
+      rdfs:subClassOf prov:Plan .
+
+:lhs  a       owl:FunctionalProperty , owl:ObjectProperty ;
+      rdfs:comment "A property linking a parent node of a binary tree to its left hand side child."@en ;
+      rdfs:domain
+              [ a       owl:Class ;
+                owl:unionOf (:AND_Node :OR_Node :XOR_Node)
+              ] ;
+      rdfs:label "lhs"@en ;
+      rdfs:range
+              [ a       owl:Class ;
+                owl:unionOf (:AND_Node :LeafNode :OR_Node :XOR_Node)
+              ] ;
+      rdfs:subPropertyOf skos:related .
+
+:DataPreprocessing
+      a       owl:Class ;
+      rdfs:comment "A kind of activity plan describing the process of data preprocessing (e.g. stop words removal, filtering, text case transformation, etc.)"@en ;
+      rdfs:label "Data Preprocessing"@en ;
+      rdfs:subClassOf :ActivityPlan .
+
+:SentimentAnalysis
+      a       owl:Class ;
+      rdfs:comment "A kind of activity plan describing analysis that utilises an algorithm to determine the sentiment (e.g. positive, negative, neutral) in a corpus of documents."@en ;
+      rdfs:label "Sentiment Analysis"@en ;
+      rdfs:subClassOf :DataAnalysis .
+
+:TopicExtraction
+      a       owl:Class ;
+      rdfs:comment "A kind activity plan describing  analysis that utilise and algorithm for extracting topics from a corpus of documents."@en ;
+      rdfs:label "Topic Extraction"@en ;
+      rdfs:subClassOf :DataAnalysis .
+
+:Precondition
+      a       :Constraint , owl:NamedIndividual ;
+      rdfs:comment "A kind of role describing that the associated prov:Entity denoted a poscondition constraint used by some activity describing a state of the world that entities conformed to before this activity ended. For example, a precondition can be described with a parameter denoting a threshold for the  maximum number of data items that can be processed by an activity."@en ;
+      rdfs:label "Precondition"@en .
+
+:Time
+      a       :Parameter , owl:NamedIndividual ;
+      rdfs:comment "A role describing that the associated prov:Entity denoted an activity parameter containing some information about time used in some data processing activity."@en ;
+      rdfs:label "Time"@en .
 
 []    a       owl:Axiom ;
       rdfs:comment "A kind of activity plan describing some data filtering process. The kind of filtering action is further described by prov:Entities used by the activity and described using pope:Parameter role, and associated PoPE subproperties of skos:related such as pope:includedIn, pope:subsumes, etc.   For example, and entity with the role pope:Keyword linked to the entities generated by the filtering activity via pope:includedIn denotes that the generated entities contain a specific keyword (subject to further constriants imposed on the parameters described using pope:Constraint)."@en ;
@@ -180,108 +305,51 @@ a binary tree description of pope:Constraint to a specific pope:Parameter wich c
       owl:annotatedSource :DataFiltering ;
       owl:annotatedTarget :DataPreprocessing .
 
-:WordFrequencyCount
-      a       :ActivityPlan , owl:NamedIndividual .
-
-:DataSet
-      a       owl:Class ;
-      rdfs:label "Data Set"@en ;
-      rdfs:subClassOf prov:Role .
-
-:ApiEndpoint
-      a       :Parameter , owl:NamedIndividual .
-
-:Keyword
-      a       :Parameter , owl:NamedIndividual .
-
-:isPreceededBy
-      a       owl:ObjectProperty ;
-      rdfs:comment "A property for linking two instances of pope:ActivityPlan in a sequence."@en ;
-      rdfs:domain :ActivityPlan ;
-      rdfs:label "isPreceededBy"@en ;
-      rdfs:range :ActivityPlan .
-
-:notIncludedIn
-      a       owl:ObjectProperty ;
-      rdfs:comment "A parameter denoting that some skos:Concept cannot be used to describe any part of another skos:Concept."@en ;
-      rdfs:label "notIncludedIn"@en ;
-      rdfs:subPropertyOf skos:related .
-
-:DataFiltering
-      a       :ActivityPlan , owl:NamedIndividual , :DataPreprocessing .
-
-:GroupTag
-      a       :Parameter , owl:NamedIndividual .
-
-:ActivityPlan
-      a       owl:Class ;
-      rdfs:comment "A concept describing a high level plan of a data processing activity."@en ;
-      rdfs:label "Activity Plan"@en ;
-      rdfs:subClassOf prov:Plan .
-
-:lhs  a       owl:FunctionalProperty , owl:ObjectProperty ;
-      rdfs:comment "A property linking a parent node of a binary tree to its left hand side child."@en ;
-      rdfs:domain :OR_Node , :AND_Node , :XOR_Node ;
-      rdfs:label "lhs"@en ;
-      rdfs:range :LeafNode , :OR_Node , :AND_Node , :XOR_Node .
-
-:DataPreprocessing
-      a       owl:Class ;
-      rdfs:comment "A kind of data processing activity plan describing the process of data preprocessing (e.g. stop words removal, filtering, text case transformation, etc.)"@en ;
-      rdfs:label "Data Preprocessing"@en ;
-      rdfs:subClassOf :ActivityPlan .
-
-:SentimentAnalysis
-      a       owl:Class ;
-      rdfs:subClassOf :DataAnalysis .
-
-:TopicExtraction
-      a       owl:Class , :ActivityPlan , owl:NamedIndividual , :DataAnalysis ;
-      rdfs:subClassOf :DataAnalysis .
-
-:Precondition
-      a       :Constraint , owl:NamedIndividual ;
-      rdfs:label "Precondition"@en .
-
-:Time
-      a       :Parameter , owl:NamedIndividual .
+:NewsArticleDataSet
+      a       owl:NamedIndividual , :DataSet ;
+      rdfs:comment "A kind of role describing that the associated prov:Entity denoted a prov:Collection representing a collection of news articles."@en ;
+      rdfs:label "News Article Dataset"@en .
 
 :Postcondition
       a       :Constraint , owl:NamedIndividual ;
+      rdfs:comment "A kind of role describing that the associated prov:Entity denoted a poscondition constraint used by some activity describing a state of the world that entities generated this activity conformed to."@en ;
       rdfs:label "Postcondition"@en .
 
 :TextToLowerCase
       a       :ActivityPlan , owl:NamedIndividual , :DataPreprocessing ;
+      rdfs:comment "Conversion of text to lowercase."@en ;
       rdfs:label "Text To Lower Case"@en .
-
-:NewsArticlesDataSet
-      a       owl:NamedIndividual , :DataSet .
 
 :includedIn
       a       owl:ObjectProperty ;
-      rdfs:comment "A parameter denoting that some skos:Concept can be used to describe a part of another skos:Concept."@en ;
+      rdfs:comment "A includedIn B denotes that the instance A describes a part of instance B. For example, if B is a dataset item, A can represent a portion of that item, for example, a body of a post contianed within B."@en ;
       rdfs:label "includedIn"@en ;
       rdfs:subPropertyOf skos:related ;
       owl:inverseOf :includes .
 
 :isEqualTo
       a       owl:SymmetricProperty , owl:ObjectProperty ;
+      rdfs:comment "A isEqualTo B denotes that the value represented by instance A is equal to the value represented by instance B, however, A and B are not the same. For exampel, a red glass of water can be equal to a blue glass of water of the same size."@en ;
       rdfs:label "isEqualTo"@en ;
       rdfs:subPropertyOf skos:related .
 
-:SentimentDetection
-      a       :ActivityPlan , owl:NamedIndividual , :DataAnalysis .
+:WordFrequencyDataSet
+      a       owl:NamedIndividual , :DataSet ;
+      rdfs:comment "A kind of role describing that the associated prov:Entity denoted a prov:Collection representing  word frequency  results collection."@en ;
+      rdfs:label "Word Frequency Dataset"@en .
 
 :TextObject
-      a       :Parameter , owl:NamedIndividual .
+      a       :Parameter , owl:NamedIndividual ;
+      rdfs:comment "A role describing that the associated prov:Entity denoted an activity parameter containing some information about a piece of text used in some data processing activity."@en ;
+      rdfs:label "Text Object"@en .
 
 []    a       owl:Axiom ;
-      rdfs:comment "A kind of activity plan describing a process converting text to uppercase. This kind of action is further described by prov:Entities used by the activity and described using pope:Parameter role, and associated PoPE subproperties of skos:related such as pope:includedIn, pope:subsumes, etc.   For example, and entity with role pope:Regex representing lowercase letters linked to some characteristics of entities (data items) generated by the activity via pope:doesNotMatch denotes that the generated entities contain a text that does not contain any lowercase letters (subject to further constriants imposed on the parameters described using pope:Constraint)."@en ;
-      rdfs:label "Text to uppercase"@en ;
+      rdfs:comment "An activity precondition describes a state of the world that used entities conformed to. The state is described as logical groupings of one or more pope:Parameter used by the activity and semantically linked with subproperties of skos:related to some characterists of used datasets or dataset items."@en ;
+      rdfs:label "Precondition"@en ;
       owl:annotatedProperty
               rdf:type ;
-      owl:annotatedSource :TextToUpperCase ;
-      owl:annotatedTarget :DataPreprocessing .
+      owl:annotatedSource :Precondition ;
+      owl:annotatedTarget :Constraint .
 
 <http://w3id.org/abdn/policy/pope>
       a       owl:Ontology ;
@@ -293,11 +361,22 @@ a binary tree description of pope:Constraint to a specific pope:Parameter wich c
       owl:versionInfo "1.0"^^xsd:string .
 
 :parameter
-      a       owl:FunctionalProperty , owl:ObjectProperty ;
+      a       owl:ObjectProperty ;
       rdfs:comment "A property for linking pope:LeafNode to a prov:Entity typically associated with a role of pope:Parameter."@en ;
       rdfs:domain :LeafNode ;
       rdfs:label "parameter"@en ;
-      rdfs:range prov:Entity .
+      rdfs:range prov:Entity ;
+      rdfs:subPropertyOf skos:related .
+
+:NaiveBayesSentimentAnalysis
+      a       :ActivityPlan , owl:NamedIndividual , :DataAnalysis , :SentimentAnalysis ;
+      rdfs:comment "A sentiment analysis utilising the naïve Bayes algorithm."@en ;
+      rdfs:label "Naïve Bayes Sentiment Analysis"@en .
+
+:TopicExtractionDataSet
+      a       owl:NamedIndividual , :DataSet ;
+      rdfs:comment "A kind of role describing that the associated prov:Entity denoted a prov:Collection representing topic extraction results collection."@en ;
+      rdfs:label "Topic Extraction Dataset"@en .
 
 :describedAs
       a       owl:ObjectProperty ;
