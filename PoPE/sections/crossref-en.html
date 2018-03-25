@@ -72,6 +72,7 @@ This section provides details for each class and property defined by PoPE Versio
          <dd>
             <a href="#CollectionViaApi"
                title="http://w3id.org/abdn/policy/pope#CollectionViaApi">Collection via API</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#DataAddition" title="http://w3id.org/abdn/policy/pope#DataAddition">Data Addition</a>
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#DataFiltering" title="http://w3id.org/abdn/policy/pope#DataFiltering">Data Filtering</a>
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#DataRemoval" title="http://w3id.org/abdn/policy/pope#DataRemoval">Data Removal</a>
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#LDA_TopicExtraction"
@@ -214,7 +215,8 @@ This section provides details for each class and property defined by PoPE Versio
          </dd>
          <dt>has members</dt>
          <dd>
-            <a href="#DataFiltering" title="http://w3id.org/abdn/policy/pope#DataFiltering">Data Filtering</a>
+            <a href="#DataAddition" title="http://w3id.org/abdn/policy/pope#DataAddition">Data Addition</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#DataFiltering" title="http://w3id.org/abdn/policy/pope#DataFiltering">Data Filtering</a>
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#DataRemoval" title="http://w3id.org/abdn/policy/pope#DataRemoval">Data Removal</a>
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#TextToLowerCase" title="http://w3id.org/abdn/policy/pope#TextToLowerCase">Text To Lower Case</a>
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#TextToUpperCase" title="http://w3id.org/abdn/policy/pope#TextToUpperCase">Text To Upper Case</a>
@@ -854,6 +856,9 @@ a binary tree description of pope:Constraint to a specific pope:Parameter wich c
             title="http://w3id.org/abdn/policy/pope#CollectionViaApi">Collection via API</a>
       </li>
       <li>
+         <a href="#DataAddition" title="http://w3id.org/abdn/policy/pope#DataAddition">Data Addition</a>
+      </li>
+      <li>
          <a href="#DataFiltering" title="http://w3id.org/abdn/policy/pope#DataFiltering">Data Filtering</a>
       </li>
       <li>
@@ -977,6 +982,29 @@ a binary tree description of pope:Constraint to a specific pope:Parameter wich c
          </dd>
       </dl>
    </div>
+   <div class="entity" id="DataAddition">
+      <h3>Data Addition<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#DataAddition</p>
+      <div class="comment">
+         <span class="markdown">Addition of data based on some parameters. Resulting dataset collection(s) will contain the same amount of data items as the sum of data items in collections used by the activity.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#ActivityPlan" title="http://w3id.org/abdn/policy/pope#ActivityPlan">Activity Plan</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dd>
+            <a href="#DataPreprocessing"
+               title="http://w3id.org/abdn/policy/pope#DataPreprocessing">Data Preprocessing</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="DataFiltering">
       <h3>Data Filtering<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
@@ -985,7 +1013,7 @@ a binary tree description of pope:Constraint to a specific pope:Parameter wich c
       <p>
          <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#DataFiltering</p>
       <div class="comment">
-         <span class="markdown">Filtering of data based on some parameters.</span>
+         <span class="markdown">Filtering of data based on some parameters. Resulting dataset collection(s) will contain only those data items that met the filtering conditions.</span>
       </div>
       <dl class="description">
          <dt>belongs to</dt>
@@ -1008,7 +1036,7 @@ a binary tree description of pope:Constraint to a specific pope:Parameter wich c
       <p>
          <strong>IRI:</strong> http://w3id.org/abdn/policy/pope#DataRemoval</p>
       <div class="comment">
-         <span class="markdown">Removal of data based on some parameters.</span>
+         <span class="markdown">Removal of data s based on some parameters. Resulting dataset collection(s) will contain the same amount of data items as the sum of data items in collections used by the activity.</span>
       </div>
       <dl class="description">
          <dt>belongs to</dt>
